@@ -69,18 +69,38 @@ nav a:hover {
 }
 
 #intro {
+  position: relative;
   height: 100%;
   background: radial-gradient(#253b0c, #212121);
 }
 
-.intro-image img {
+/* .intro-image img {
   position: absolute;
   height: 100%;
+  width: 100vw;
   grid: 1, -1;
   object-fit: cover;
   animation: intro-animation linear forwards;
   animation-timeline: view();
   animation-range: exit;
+} */
+
+/* Por defecto: Safari (sin soporte para animation-timeline) */
+.intro-image img {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+}
+
+/* Si el navegador soporta animation-timeline (Chrome y otros modernos) */
+@supports (animation-timeline: view()) {
+  .intro-image img {
+    grid: 1, -1;
+    object-fit: cover;
+    animation: intro-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+  }
 }
 
 .intro-grid {
