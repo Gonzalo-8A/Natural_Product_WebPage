@@ -367,12 +367,10 @@ nav a:hover {
   margin-bottom: 1.5rem;
 }
 .add-to-cart-1:hover {
-  translate: 0 -0.2rem;
   box-shadow: 0 0.5rem 0 #253b0c;
 }
 
 .add-to-cart-1:active {
-  translate: 0 0;
   box-shadow: 0 0 0;
 }
 
@@ -413,15 +411,11 @@ nav a:hover {
 }
 
 .bottom-button:hover {
-  /* backdrop-filter: none; */
-  border: 0.2rem solid #406418da;
-  padding: 0.8rem;
+  box-shadow: 0 0 0 0.2rem #406418da;
 }
 
 .bottom-button:active {
-  /* backdrop-filter: none; */
-  border: none;
-  padding: 1rem;
+  box-shadow: none;
 }
 
 .show_all {
